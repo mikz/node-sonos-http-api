@@ -44,4 +44,8 @@ if (!fs.existsSync(settings.cacheDir)) {
   }
 }
 
+if (typeof(settings.voicerss) === 'undefined') {
+  settings.voicerss = process.env.VOICERSS_API_KEY
+}
+
 module.exports = settings;
